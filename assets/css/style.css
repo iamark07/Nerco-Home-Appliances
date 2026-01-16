@@ -1,0 +1,23 @@
+/* Landing Page Specific Styles */
+
+/* Hero Slider Transitions */
+.slider-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.slider-slide.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,65 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Brand Colors */
+:root {
+    --brand-red: #e74c3c;
+    --brand-dark: #2c3e50;
+}
+
+/* Global Font Setting */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Brand Color Utility Classes */
+.brand-red {
+    color: var(--brand-red);
+}
+
+.bg-brand-red {
+    background-color: var(--brand-red);
+}
+
+.border-brand-red {
+    border-color: var(--brand-red);
+}
+
+.brand-dark {
+    color: var(--brand-dark);
+}
+
+.text-brand-dark {
+    color: var(--brand-dark);
+}
+
+.bg-brand-dark {
+    background-color: var(--brand-dark);
+}
+
+.hover\:text-brand-red:hover {
+    color: var(--brand-red);
+}
+
+.hover\:bg-red-50:hover {
+    background-color: #fef2f2;
+}
+
+.focus\:border-brand-red:focus {
+    border-color: var(--brand-red);
+}
+
+/* Header Styles */
+header {
+    transition: all 0.3s ease;
+}
+
+/* Search Bar Styling */
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+/* Dropdown Animation */
+.dropdown-trigger:hover > div[class*="hidden"] {
+    display: block;
+}
