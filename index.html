@@ -59,53 +59,33 @@
 
                         <!-- Dropdown Panel -->
                         <div id="products-dropdown-panel" class="hidden absolute left-1/2 transform -translate-x-1/2 pt-2 ">
-                            <div class="px-4 min-w-[1030px] bg-white border border-gray-200 rounded-lg py-3 text-sm z-50 shadow-lg">
+                            <div class="px-4 min-w-[500px] bg-white border border-gray-200 rounded-lg py-3 text-sm z-50 shadow-lg">
                                 <!-- Category Icons Row -->
                                 <div id="products-categories" class="flex items-center justify-center gap-8 overflow-x-auto scrollbar-hide py-3">
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="fans">
-                                        <img src="assets/images/product-icons/ceiling-fan.png" alt="Fans" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Fans</span>
-                                    </button>
-
                                     <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="cooler">
                                         <img src="assets/images/product-icons/air-cooler.png" alt="Cooler" class="w-14 h-14 object-cover mb-2">
                                         <span class="text-sm text-gray-700 mt-1">Cooler</span>
                                     </button>
 
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="water-heater">
-                                        <img src="assets/images/product-icons/water-heater.png" alt="Water Heater" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Water Heater</span>
+                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="ceiling-fan">
+                                        <img src="assets/images/product-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-14 h-14 object-cover mb-2">
+                                        <span class="text-sm text-gray-700 mt-1">Ceiling Fan</span>
                                     </button>
 
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="kitchen-mixer">
-                                        <img src="assets/images/product-icons/kitchen-mixer.png" alt="Kitchen Mixer" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Kitchen Mixer</span>
+                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="pedestal-fan">
+                                        <img src="assets/images/product-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-14 h-14 object-cover mb-2">
+                                        <span class="text-sm text-gray-700 mt-1">Pedestal Fan</span>
                                     </button>
 
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="iron">
-                                        <img src="assets/images//product-icons/iron.png" alt="Iron" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Iron</span>
-                                    </button>
-
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="exhaust-fan">
-                                        <img src="assets/images/product-icons/exhaust-fan.png" alt="Exhaust Fan" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Exhaust Fan</span>
-                                    </button>
-
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="pedestal-fans">
-                                        <img src="assets/images/product-icons/pedestal-fans.png" alt="Pedestal Fans" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Pedestal Fans</span>
-                                    </button>
-
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="juicer-mixer">
-                                        <img src="assets/images/product-icons/juicer.png" alt="Juicer Mixer" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Juicer Mixer</span>
+                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="motors">
+                                        <img src="assets/images/product-icons/motors.png" alt="Motors" class="w-14 h-14 object-cover mb-2">
+                                        <span class="text-sm text-gray-700 mt-1">Motors</span>
                                     </button>
                                 </div>
 
                                 <div class="border-t border-gray-100 mt-3 pt-4">
                                     <!-- Products Grid (populated via JS) -->
-                                    <div id="products-dropdown-products" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+                                    <div id="products-dropdown-products" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
                                 </div>
                             </div>
                         </div>
@@ -161,17 +141,6 @@
                         <i id="products-arrow" class="ri-arrow-down-s-line text-lg transition-transform duration-300 text-gray-400 group-hover:text-brand-red"></i>
                     </button>
                     <div id="mobile-products-menu" class="hidden bg-gray-50 rounded-lg py-1 mx-2 space-y-1 border border-gray-100">
-                        <!-- Fans -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="fans">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/ceiling-fan.png" alt="Fans" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Fans</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
                         <!-- Cooler -->
                         <div class="mobile-category-group">
                             <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="cooler">
@@ -183,67 +152,34 @@
                             </button>
                             <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
                         </div>
-                        <!-- Water Heater -->
+                        <!-- Ceiling Fan -->
                         <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="water-heater">
+                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="ceiling-fan">
                                 <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/water-heater.png" alt="Water Heater" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Water Heater</span>
+                                    <img src="assets/images/product-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-5 h-5 object-cover">
+                                    <span class="text-xs">Ceiling Fan</span>
                                 </div>
                                 <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
                             </button>
                             <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
                         </div>
-                        <!-- Kitchen Mixer -->
+                        <!-- Pedestal Fan -->
                         <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="kitchen-mixer">
+                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="pedestal-fan">
                                 <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/kitchen-mixer.png" alt="Kitchen Mixer" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Kitchen Mixer</span>
+                                    <img src="assets/images/product-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-5 h-5 object-cover">
+                                    <span class="text-xs">Pedestal Fan</span>
                                 </div>
                                 <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
                             </button>
                             <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
                         </div>
-                        <!-- Iron -->
+                        <!-- Motors -->
                         <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="iron">
+                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="motors">
                                 <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/iron.png" alt="Iron" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Iron</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
-                        <!-- Exhaust Fan -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="exhaust-fan">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/exhaust-fan.png" alt="Exhaust Fan" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Exhaust Fan</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
-                        <!-- Pedestal Fans -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="pedestal-fans">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/pedestal-fans.png" alt="Pedestal Fans" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Pedestal Fans</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
-                        <!-- Juicer Mixer -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="juicer-mixer">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/juicer.png" alt="Juicer Mixer" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Juicer Mixer</span>
+                                    <img src="assets/images/product-icons/motors.png" alt="Motors" class="w-5 h-5 object-cover">
+                                    <span class="text-xs">Motors</span>
                                 </div>
                                 <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
                             </button>

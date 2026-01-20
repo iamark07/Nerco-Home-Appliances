@@ -129,45 +129,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Simple product data (re-using available category images)
   const PRODUCTS = {
-    "fans": [
-      { title: "Ceiling Fan Pro", img: "assets/images/category-img/img-1.png" },
-      { title: "High Speed Fan", img: "assets/images/category-img/img-2.png" },
-      { title: "Decorative Fan", img: "assets/images/category-img/img-3.png" }
-    ],
     "cooler": [
       { title: "Desert Cooler", img: "assets/images/category-img/img-1.png" },
       { title: "Personal Cooler", img: "assets/images/category-img/img-2.png" },
       { title: "Tower Cooler", img: "assets/images/category-img/img-3.png" }
     ],
-    "water-heater": [
-      { title: "Instant Heater", img: "assets/images/category-img/img-2.png" },
-      { title: "Storage Geyser", img: "assets/images/category-img/img-1.png" },
-      { title: "Gas Geyser", img: "assets/images/category-img/img-3.png" }
+    "ceiling-fan": [
+      { title: "Ceiling Fan Pro", img: "assets/images/category-img/img-1.png" },
+      { title: "High Speed Fan", img: "assets/images/category-img/img-2.png" },
+      { title: "Decorative Fan", img: "assets/images/category-img/img-3.png" }
     ],
-    "kitchen-mixer": [
-      { title: "Mixer Grinder 500W", img: "assets/images/category-img/img-3.png" },
-      { title: "Mixer Grinder 750W", img: "assets/images/category-img/img-1.png" },
-      { title: "Juicer Mixer", img: "assets/images/category-img/img-2.png" }
-    ],
-    "iron": [
-      { title: "Dry Iron", img: "assets/images/category-img/img-1.png" },
-      { title: "Steam Iron", img: "assets/images/category-img/img-2.png" },
-      { title: "Travel Iron", img: "assets/images/category-img/img-3.png" }
-    ],
-    "exhaust-fan": [
-      { title: "Metal Exhaust", img: "assets/images/category-img/img-3.png" },
-      { title: "Plastic Exhaust", img: "assets/images/category-img/img-1.png" },
-      { title: "Ventilation Fan", img: "assets/images/category-img/img-2.png" }
-    ],
-    "pedestal-fans": [
+    "pedestal-fan": [
       { title: "Stand Fan", img: "assets/images/category-img/img-2.png" },
       { title: "Table Fan", img: "assets/images/category-img/img-3.png" },
       { title: "Wall Fan", img: "assets/images/category-img/img-1.png" }
     ],
-    "juicer-mixer": [
-      { title: "Juicer 1", img: "assets/images/category-img/img-1.png" },
-      { title: "Juicer 2", img: "assets/images/category-img/img-2.png" },
-      { title: "Fruit Extractor", img: "assets/images/category-img/img-3.png" }
+    "motors": [
+      { title: "Water Pump", img: "assets/images/category-img/img-1.png" },
+      { title: "Fan Motor", img: "assets/images/category-img/img-2.png" },
+      { title: "Industrial Motor", img: "assets/images/category-img/img-3.png" }
     ]
   };
 
