@@ -25,29 +25,32 @@
 
     <!-- Header / Navbar -->
     <header class="fixed w-full top-0 z-50 bg-white border-b border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-5">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="flex items-center gap-2">
-                        <div class="px-4 sm:px-5 py-2 sm:py-3 h-fit! bg-brand-red rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold sm:text-xl">N</span>
+                        <div class="hidden flex items-center gap-2">
+                            <div class="px-4 sm:px-5 py-2 sm:py-3 h-fit! bg-brand-red rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold sm:text-xl">N</span>
+                            </div>
+                            <div>
+                                <div class="text-sm sm:text-lg font-bold text-brand-dark">NERCO</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Home Appliances</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="text-sm sm:text-lg font-bold text-brand-dark">NERCO</div>
-                            <div class="text-xs sm:text-sm text-gray-600">Home Appliances</div>
-                        </div>
+                        <img src="assets/images/logo/nerco-logo.png" alt="Nerco Logo" class="w-16 sm:w-28 object-cover">
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden xl:flex items-center space-x-1">
-                    <a href="#home" class="px-4 py-2 text-gray-700 hover:text-brand-red transition text-sm uppercase">Home</a>
-                    <a href="#about" class="px-4 py-2 text-gray-700 hover:text-brand-red transition text-sm uppercase">About Us</a>
+                    <a href="#home" class="px-4 py-2 text-gray-700 hover:text-brand-red transition uppercase font-medium">Home</a>
+                    <a href="#about" class="px-4 py-2 text-gray-700 hover:text-brand-red transition uppercase font-medium">About Us</a>
                     
                     <!-- Products Dropdown (click to open, show category icons + products) -->
                     <div class="relative" id="products-dropdown">
-                        <button id="products-dropdown-btn" class="cursor-pointer px-4 py-2 text-gray-700 hover:text-brand-red transition text-sm flex items-center gap-1 uppercase">
+                        <button id="products-dropdown-btn" class="cursor-pointer px-4 py-2 text-gray-700 hover:text-brand-red transition flex items-center gap-1 uppercase font-medium">
                             Products
                             <i id="products-dropdown-arrow" class="ri-arrow-down-s-line w-5 h-5 transition-transform"></i>
                         </button>
@@ -108,8 +111,8 @@
                         </div>
                     </div>
 
-                    <a href="#e-catalogue" class="px-4 py-2 text-gray-700 hover:text-brand-red transition text-sm uppercase">E-Catalogue</a>
-                    <a href="#contact" class="px-4 py-2 text-gray-700 hover:text-brand-red transition text-sm uppercase">Contact</a>
+                    <a href="#e-catalogue" class="px-4 py-2 text-gray-700 hover:text-brand-red transition uppercase font-medium">E-Catalogue</a>
+                    <a href="#contact" class="px-4 py-2 text-gray-700 hover:text-brand-red transition uppercase font-medium">Contact</a>
                 </nav>
 
                 <!-- Search & CTA -->
@@ -118,7 +121,7 @@
                     <button class="search-btn min-w-12 min-h-12 rounded-full cursor-pointer text-gray-700 hover:text-brand-red transition flex items-center justify-center bg-gray-100">
                         <i class="ri-search-line text-xl"></i>
                     </button>
-                    <a href="#cta" class="flex items-center justify-center w-full px-4 py-3 bg-brand-red text-white font-medium rounded-lg hover:bg-red-700 transition text-sm">
+                    <a href="#cta" class="flex items-center justify-center w-full px-5 py-3 bg-brand-red text-white font-medium rounded-lg hover:bg-red-700 transition">
                         Become a Dealer
                     </a>
                 </div>
@@ -141,7 +144,8 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl xl:hidden">
             <div class="p-4 border-b border-gray-100 flex justify-between items-center">
-                <span class="font-bold text-lg text-brand-dark">Menu</span>
+                <span class="font-bold text-lg text-brand-dark hidden">Menu</span>
+                <img src="assets/images/logo/nerco-logo.png" alt="Nerco Logo" class="w-12 object-cover">
                 <button id="close-mobile-menu" class="text-gray-500 hover:text-brand-red">
                     <i class="ri-close-line text-2xl"></i>
                 </button>
@@ -265,25 +269,25 @@
         <!-- Hero Image -->
         <div class="relative w-full overflow-hidden group" id="hero-slider">
             <!-- Spacer image to set natural aspect ratio -->
-            <img src="assets/images/slider-banners/banner-1.jpg" alt="" class="w-full h-auto invisible" aria-hidden="true">
+            <img src="assets/images/slider-banners/Hame-page-Banner1.jpg" alt="" class="w-full h-auto invisible" aria-hidden="true">
 
             <!-- Slide 1 -->
             <div class="slider-slide active">
-                <img src="assets/images/slider-banners/banner-1.jpg" 
+                <img src="assets/images/slider-banners/Hame-page-Banner1.jpg" 
                      alt="Modern Kitchen with Nerco Premium Appliances" 
                      class="w-full h-full object-cover">
             </div>
             
             <!-- Slide 2 -->
             <div class="slider-slide">
-                <img src="assets/images/slider-banners/banner-2.jpg" 
+                <img src="assets/images/slider-banners/home-page-banner2.jpg" 
                      alt="Nerco High Speed Ceiling Fan in Living Room" 
                      class="w-full h-full object-cover">
             </div>
             
             <!-- Slide 3 -->
             <div class="slider-slide">
-                <img src="assets/images/slider-banners/banner-3.jpg" 
+                <img src="assets/images/slider-banners/Hame-page-Banner1.jpg" 
                      alt="Cozy Room with Nerco Electric Heater" 
                      class="w-full h-full object-cover">
             </div>
@@ -977,27 +981,16 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Info -->
                 <div>
-                    <a href="#" class="flex items-center gap-2 mb-6">
-                        <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center text-white font-bold text-xl">N</div>
-                        <span class="text-2xl font-bold tracking-wide">NERCO</span>
+                    <a href="#" class="flex items-center justify-center gap-2 mb-6">
+                        <div class="hidden flex items-center gap-2">
+                            <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center text-white font-bold text-xl">N</div>
+                            <span class="text-2xl font-bold tracking-wide">NERCO</span>
+                        </div>
+                        <img src="assets/images/logo/nerco-logo.png" alt="Nerco Logo" class="w-28 sm:w-32 object-cover">
                     </a>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 text-center sm:text-left">
                         Innovating home comfort with premium quality appliances. We bring efficiency and style to your living spaces.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
-                            <i class="ri-facebook-fill text-lg"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
-                            <i class="ri-instagram-line text-lg"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
-                            <i class="ri-twitter-x-line text-lg"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
-                            <i class="ri-linkedin-fill text-lg"></i>
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Quick Links -->
@@ -1036,7 +1029,7 @@
                         Contact Us
                         <span class="absolute -bottom-2 left-0 w-12 h-1 bg-brand-red rounded-full"></span>
                     </h4>
-                    <ul class="space-y-3 text-gray-400 text-sm mb-8">
+                    <ul class="space-y-3 text-gray-400 text-sm mb-5">
                         <li class="flex items-start gap-3">
                             <i class="ri-map-pin-line text-brand-red text-lg mt-0.5"></i>
                             <span>123 Industrial Area, Phase 2,<br>New Delhi, India</span>
@@ -1050,6 +1043,20 @@
                             <span>info@nercoappliances.com</span>
                         </li>
                     </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
+                            <i class="ri-facebook-fill text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
+                            <i class="ri-instagram-line text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
+                            <i class="ri-twitter-x-line text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all duration-300">
+                            <i class="ri-linkedin-fill text-lg"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
