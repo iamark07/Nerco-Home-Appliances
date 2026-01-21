@@ -58,34 +58,37 @@
                         <!-- change dropdown products content form global.js here dynamically use content and change content on click-->
 
                         <!-- Dropdown Panel -->
-                        <div id="products-dropdown-panel" class="hidden absolute left-1/2 transform -translate-x-1/2 pt-2 ">
-                            <div class="px-4 min-w-[500px] bg-white border border-gray-200 rounded-lg py-3 text-sm z-50 shadow-lg">
-                                <!-- Category Icons Row -->
-                                <div id="products-categories" class="flex items-center justify-center gap-8 overflow-x-auto scrollbar-hide py-3">
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="cooler">
-                                        <img src="assets/images/product-icons/air-cooler.png" alt="Cooler" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Cooler</span>
-                                    </button>
-
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="ceiling-fan">
-                                        <img src="assets/images/product-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Ceiling Fan</span>
-                                    </button>
-
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="pedestal-fan">
-                                        <img src="assets/images/product-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Pedestal Fan</span>
-                                    </button>
-
-                                    <button class="category-btn flex flex-col items-center text-center px-2 focus:outline-none cursor-pointer" data-category="motors">
-                                        <img src="assets/images/product-icons/motors.png" alt="Motors" class="w-14 h-14 object-cover mb-2">
-                                        <span class="text-sm text-gray-700 mt-1">Motors</span>
-                                    </button>
-                                </div>
-
-                                <div class="border-t border-gray-100 mt-3 pt-4">
-                                    <!-- Products Grid (populated via JS) -->
-                                    <div id="products-dropdown-products" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
+                        <div id="products-dropdown-panel" class="hidden absolute left-1/2 transform -translate-x-1/2 pt-4 z-50">
+                            <div class="px-8 py-6 bg-white border border-gray-200 rounded-xl shadow-xl min-w-[600px]">
+                                <div class="flex items-center justify-center gap-10">
+                                    <!-- Cooler -->
+                                    <a href="#products" class="group flex flex-col items-center gap-3 text-center min-w-[80px]">
+                                        <div>
+                                            <img src="assets/images/category-icons/air-cooler.png" alt="Cooler" class="w-14 h-14 object-contain opacity-90">
+                                        </div>
+                                        <span class="text-sm text-gray-700 group-hover:text-brand-red transition-colors">Cooler</span>
+                                    </a>
+                                    <!-- Ceiling Fan -->
+                                    <a href="#products" class="group flex flex-col items-center gap-3 text-center min-w-[80px]">
+                                        <div>
+                                            <img src="assets/images/category-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-14 h-14 object-contain opacity-90">
+                                        </div>
+                                        <span class="text-sm text-gray-700 group-hover:text-brand-red transition-colors">Ceiling Fan</span>
+                                    </a>
+                                    <!-- Pedestal Fan -->
+                                    <a href="#products" class="group flex flex-col items-center gap-3 text-center min-w-[80px]">
+                                        <div>
+                                            <img src="assets/images/category-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-14 h-14 object-contain opacity-90">
+                                        </div>
+                                        <span class="text-sm text-gray-700 group-hover:text-brand-red transition-colors">Pedestal Fan</span>
+                                    </a>
+                                    <!-- Motors -->
+                                    <a href="#products" class="group flex flex-col items-center gap-3 text-center min-w-[80px]">
+                                        <div>
+                                            <img src="assets/images/category-icons/motors.png" alt="Motors" class="w-14 h-14 object-contain opacity-90">
+                                        </div>
+                                        <span class="text-sm text-gray-700 group-hover:text-brand-red transition-colors">Motors</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -140,51 +143,23 @@
                         <span>Products</span>
                         <i id="products-arrow" class="ri-arrow-down-s-line text-lg transition-transform duration-300 text-gray-400 group-hover:text-brand-red"></i>
                     </button>
-                    <div id="mobile-products-menu" class="hidden bg-gray-50 rounded-lg py-1 mx-2 space-y-1 border border-gray-100">
-                        <!-- Cooler -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="cooler">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/air-cooler.png" alt="Cooler" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Cooler</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
-                        <!-- Ceiling Fan -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="ceiling-fan">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Ceiling Fan</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
-                        <!-- Pedestal Fan -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="pedestal-fan">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Pedestal Fan</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
-                        <!-- Motors -->
-                        <div class="mobile-category-group">
-                            <button class="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition text-sm group mobile-category-btn" data-category="motors">
-                                <div class="flex items-center gap-3">
-                                    <img src="assets/images/product-icons/motors.png" alt="Motors" class="w-5 h-5 object-cover">
-                                    <span class="text-xs">Motors</span>
-                                </div>
-                                <i class="ri-add-line text-gray-400 group-hover:text-brand-red transition-transform"></i>
-                            </button>
-                            <div class="hidden pl-8 pr-4 py-1 space-y-2 mobile-subcategory-list"></div>
-                        </div>
+                    <div id="mobile-products-menu" class="hidden bg-[#fdfdfd] rounded-lg py-1 space-y-1 border border-gray-100">
+                        <a href="#products" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition mx-2 text-sm">
+                            <img src="assets/images/category-icons/air-cooler.png" alt="Cooler" class="w-5 h-5 object-contain opacity-90">
+                            <span>Cooler</span>
+                        </a>
+                        <a href="#products" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition mx-2 text-sm">
+                            <img src="assets/images/category-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-5 h-5 object-contain opacity-90">
+                            <span>Ceiling Fan</span>
+                        </a>
+                        <a href="#products" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition mx-2 text-sm">
+                            <img src="assets/images/category-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-5 h-5 object-contain opacity-90">
+                            <span>Pedestal Fan</span>
+                        </a>
+                        <a href="#products" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:text-brand-red hover:bg-white rounded-lg transition mx-2 text-sm">
+                            <img src="assets/images/category-icons/motors.png" alt="Motors" class="w-5 h-5 object-contain opacity-90">
+                            <span>Motors</span>
+                        </a>
                     </div>
                 </div>
 
@@ -243,71 +218,47 @@
             <div class="mb-16 sm:mb-20">
                 <div class="relative flex items-center">
                     <!-- Left Arrow -->
-                    <button id="category-scroll-left" class="absolute -left-4 z-10 hidden sm:flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 bg-white/80 backdrop-blur-sm rounded-full hover:bg-brand-red hover:text-brand-red transition text-gray-600 border border-gray-200 cursor-pointer">
+                    <button id="category-scroll-left" class="absolute -left-2 z-10 hidden items-center justify-center w-10 sm:w-12 h-10 sm:h-12 bg-white/80 backdrop-blur-sm rounded-full hover:bg-brand-red hover:text-brand-red transition text-gray-600 border border-gray-200 cursor-pointer">
                         <i class="ri-arrow-left-s-line sm:text-xl"></i>
                     </button>
 
                     <!-- Categories Grid -->
                     <div id="category-scroll-container" class="flex items-start gap-8 sm:gap-16 w-full px-8 sm:px-12 overflow-x-auto scrollbar-hide scroll-smooth">
-                        <!-- Category 1 -->
+                        <!-- Category 1: Cooler -->
                         <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-1.png" alt="Ceiling Fans" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-28 h-28 sm:w-48 sm:h-48 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden">
+                                <img src="assets/images/products-img/cooler/16-in-silk.png" alt="Air Coolers" class="w-full h-full object-cover p-5 group-hover:scale-110 transition-transform duration-300">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Coolers</p>
+                        </div>
+
+                        <!-- Category 2: Ceiling Fan -->
+                        <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
+                            <div class="w-28 h-28 sm:w-48 sm:h-48 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden">
+                                <img src="assets/images/products-img/ceiling-fans/polo.png" alt="Ceiling Fans" class="w-full h-full object-cover p-5 group-hover:scale-110 transition-transform duration-300">
                             </div>
                             <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Ceiling Fans</p>
                         </div>
 
-                        <!-- Category 2 -->
+                        <!-- Category 3: Pedestal Fan -->
                         <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-2.png" alt="Air Coolers" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-28 h-28 sm:w-48 sm:h-48 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden">
+                                <img src="assets/images/products-img/pedestal-fans/heavy-duty.png" alt="Pedestal Fans" class="w-full h-full object-cover p-5 group-hover:scale-110 transition-transform duration-300">
                             </div>
-                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Air Coolers</p>
+                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Pedestal Fans</p>
                         </div>
 
-                        <!-- Category 3 -->
+                        <!-- Category 4: Motors -->
                         <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-3.png" alt="Room Heaters" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-28 h-28 sm:w-48 sm:h-48 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden">
+                                <img src="assets/images/products-img/motors/bahubali.png" alt="Motors" class="w-full h-full object-cover p-5 group-hover:scale-110 transition-transform duration-300">
                             </div>
-                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Room Heaters</p>
-                        </div>
-
-                        <!-- Category 4 -->
-                        <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-1.png" alt="Kitchen Mixers" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
-                            </div>
-                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Kitchen Mixers</p>
-                        </div>
-
-                        <!-- Category 5 -->
-                        <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-2.png" alt="Water Heaters" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
-                            </div>
-                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Water Heaters</p>
-                        </div>
-
-                        <!-- Category 6 -->
-                        <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-3.png" alt="Exhaust Fans" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
-                            </div>
-                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Exhaust Fans</p>
-                        </div>
-
-                        <!-- Category 7 -->
-                        <div class="flex flex-col items-center group cursor-pointer flex-shrink-0">
-                            <div class="w-20 h-20 sm:w-40 sm:h-40 bg-gray-100 rounded-full flex items-center justify-center border-2 border-gray-100 group-hover:border-brand-red group-hover:bg-red-50 transition-all duration-300 overflow-hidden p-1">
-                                <img src="assets/images/category-img/img-1.png" alt="Premium Speakers" class="w-[80%] h-[80%] object-cover rounded-full group-hover:scale-110 transition-transform duration-300">
-                            </div>
-                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Premium Speakers</p>
+                            <p class="text-xs sm:text-sm font-medium text-gray-700 mt-4 text-center whitespace-nowrap">Motors</p>
                         </div>
                     </div>
 
                     <!-- Right Arrow -->
-                    <button id="category-scroll-right" class="absolute -right-4 z-10 hidden sm:flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 bg-white/80 backdrop-blur-sm rounded-full hover:bg-brand-red hover:text-brand-red transition text-gray-600 border border-gray-200 cursor-pointer">
+                    <button id="category-scroll-right" class="absolute -right-2 z-10 hidden items-center justify-center w-10 sm:w-12 h-10 sm:h-12 bg-white/80 backdrop-blur-sm rounded-full hover:bg-brand-red hover:text-brand-red transition text-gray-600 border border-gray-200 cursor-pointer">
                         <i class="ri-arrow-right-s-line sm:text-xl"></i>
                     </button>
                 </div>
@@ -318,8 +269,8 @@
                 <!-- Air Coolers Section -->
                 <div>
                     <div class="flex items-center justify-between mb-8">
-                        <h3 class="text-lg sm:text-2xl font-bold text-brand-dark">Air Coolers</h3>
-                        <a href="#" class="inline-flex items-center justify-center px-6 py-2 sm:py-3 bg-brand-dark text-white rounded-full font-semibold hover:bg-brand-red transition-colors duration-300 text-xs sm:text-sm">
+                        <h3 class="text-lg sm:text-2xl font-bold text-brand-dark">Featured Products</h3>
+                        <a href="#" class="inline-flex items-center justify-center px-7 py-2 sm:py-3 bg-brand-dark text-white rounded-full font-semibold hover:bg-brand-red transition-colors duration-300 text-xs sm:text-sm">
                             View All
                         </a>
                     </div>
@@ -327,13 +278,13 @@
                         <!-- Product 1 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-1.png" 
-                                     alt="Premium Air Cooler Force" 
+                                <img src="assets/images/products-img/cooler/boxer-12-in-tower.png" 
+                                     alt="Boxer Air Cooler" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Force</h4>
-                                <p class="text-xs text-gray-500 mb-4">Premium Cooling Solution</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Boxer</h4>
+                                <p class="text-xs text-gray-500 mb-4">Cooler</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -343,13 +294,13 @@
                         <!-- Product 2 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-2.png" 
-                                     alt="Premium Air Cooler Thunder" 
+                                <img src="assets/images/products-img/ceiling-fans/kia-plus.png" 
+                                     alt="Kia Plus Ceiling Fan" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Thunder</h4>
-                                <p class="text-xs text-gray-500 mb-4">High Power Cooler</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Kia Plus</h4>
+                                <p class="text-xs text-gray-500 mb-4">Ceilling Fan</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -359,13 +310,13 @@
                         <!-- Product 3 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-3.png" 
-                                     alt="Premium Air Cooler Icon" 
+                                <img src="assets/images/products-img/motors/e-frame-cooler-motor.png" 
+                                     alt="E-Frame Motor" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Icon</h4>
-                                <p class="text-xs text-gray-500 mb-4">Smart Cooling Technology</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">E-Frame</h4>
+                                <p class="text-xs text-gray-500 mb-4">Motors</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -375,13 +326,13 @@
                         <!-- Product 4 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-1.png" 
-                                     alt="Premium Air Cooler Prithvi" 
+                                <img src="assets/images/products-img/cooler/12-in-diamond.png" 
+                                     alt="Diamond Air Cooler" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Prithvi</h4>
-                                <p class="text-xs text-gray-500 mb-4">Eco-Friendly Cooler</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Dimaond</h4>
+                                <p class="text-xs text-gray-500 mb-4">Cooler</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -391,13 +342,13 @@
                         <!-- Product 1 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-2.png" 
-                                     alt="Nerco Ceiling Fan Model 1" 
+                                <img src="assets/images/products-img/motors/mahabali.png" 
+                                     alt="Mahabali Motor" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Classic 1200</h4>
-                                <p class="text-xs text-gray-500 mb-4">High Speed Ceiling Fan</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Mahabali</h4>
+                                <p class="text-xs text-gray-500 mb-4">Motors</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -407,13 +358,13 @@
                         <!-- Product 2 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-3.png" 
-                                     alt="Nerco Ceiling Fan Model 2" 
+                                <img src="assets/images/products-img/pedestal-fans/goltu.png" 
+                                     alt="Goltu Pedestal Fan" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Decorative Pro</h4>
-                                <p class="text-xs text-gray-500 mb-4">Stylish & Efficient</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Goltu</h4>
+                                <p class="text-xs text-gray-500 mb-4">Pedestal Fan</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -423,13 +374,13 @@
                         <!-- Product 3 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-1.png" 
-                                     alt="Nerco Ceiling Fan Model 3" 
+                                <img src="assets/images/products-img/ceiling-fans/24-in-kia.png" 
+                                     alt="Kia Ceiling Fan" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Energy Max</h4>
-                                <p class="text-xs text-gray-500 mb-4">Energy Saving Expert</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Kia</h4>
+                                <p class="text-xs text-gray-500 mb-4">Ceiling Fan</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -439,13 +390,13 @@
                         <!-- Product 4 -->
                         <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-brand-red hover:shadow-xl transition-all duration-300">
                             <div class="relative h-52 sm:h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
-                                <img src="assets/images/category-img/img-2.png" 
-                                     alt="Nerco Ceiling Fan Model 4" 
+                                <img src="assets/images/products-img/pedestal-fans/champion.png" 
+                                     alt="Champion Pedestal Fan" 
                                      class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                             </div>
                             <div class="p-5 text-center">
-                                <h4 class="text-lg font-bold text-brand-dark mb-1">Premium Plus</h4>
-                                <p class="text-xs text-gray-500 mb-4">Ultra Modern Design</p>
+                                <h4 class="text-lg font-bold text-brand-dark mb-1">Champion</h4>
+                                <p class="text-xs text-gray-500 mb-4">Pedestal Fan</p>
                                 <button class="w-full px-4 py-2 bg-brand-dark text-white rounded-full font-semibold text-sm hover:bg-brand-red transition-colors duration-300">
                                     Read More
                                 </button>
@@ -468,57 +419,61 @@
             <div class="grid lg:grid-cols-11 gap-8 ">
                 <!-- Tabs (Left Side) -->
                 <div class="w-full lg:col-span-4 xl:col-span-3 grid grid-cols-2 lg:grid-cols-1 lg:gap-4 gap-2 h-fit">
-                    <!-- Tab 1 -->
-                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-brand-red text-white shadow-lg shadow-red-200 h-fit" data-target="fan">
+                    <!-- Tab 1: Cooler -->
+                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-brand-red text-white shadow-lg shadow-red-200 h-fit" data-target="cooler">
                         <div class="flex items-center flex-col lg:flex-row justify-center gap-2 sm:gap-4">
-                            <div class="icon-box w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-white/20 flex items-center justify-center text-xl transition-colors">
-                                <i class="ri-windy-line"></i>
-                            </div>
-                            <div class="text-center lg:text-left">
-                                <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Ceiling Fans</h4>
-                                <p class="text-[10px] sm:text-xs opacity-80 font-light">Silent & Powerful</p>
-                            </div>
-                        </div>
-                        <i class="arrow-icon ri-arrow-right-s-line hidden lg:block text-xl opacity-100 text-white transition-all"></i>
-                    </button>
-
-                    <!-- Tab 2 -->
-                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-white text-gray-600 hover:bg-white hover:shadow-md border border-gray-100 h-fit" data-target="cooler">
-                        <div class="flex items-center flex-col lg:flex-row justify-center gap-2 sm:gap-4">
-                            <div class="icon-box w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-gray-100 group-hover:bg-red-50 flex items-center justify-center text-xl transition-colors">
-                                <i class="ri-temp-cold-line"></i>
+                            <div class="icon-box w-10 sm:w-14 h-10 sm:h-14 rounded-full bg-white/20 flex items-center justify-center text-xl transition-colors">
+                                <img src="assets/images/category-icons/air-cooler.png" alt="Air Cooler" class="w-6 h-6 sm:w-8 sm:h-8 object-cover normal-icon hidden">
+                                <img src="assets/images/category-icons/air-cooler-white.png" alt="Air Cooler" class="w-6 h-6 sm:w-8 sm:h-8 object-cover white-icon block">
                             </div>
                             <div class="text-center lg:text-left">
                                 <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Air Coolers</h4>
                                 <p class="text-[10px] sm:text-xs opacity-80 font-light">Instant Cooling</p>
                             </div>
                         </div>
-                        <i class="arrow-icon ri-arrow-right-s-line hidden lg:block text-xl opacity-0 group-hover:opacity-100 text-brand-red transition-all"></i>
+                        <i class="arrow-icon ri-arrow-right-s-line hidden lg:block text-xl opacity-100 text-white transition-all"></i>
                     </button>
 
-                    <!-- Tab 3 -->
-                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-white text-gray-600 hover:bg-white hover:shadow-md border border-gray-100 h-fit" data-target="heater">
+                    <!-- Tab 2: Ceiling Fan -->
+                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-white text-gray-600 hover:bg-white hover:shadow-md border border-gray-100 h-fit" data-target="fan">
                         <div class="flex items-center flex-col lg:flex-row justify-center gap-2 sm:gap-4">
-                            <div class="icon-box w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-gray-100 group-hover:bg-red-50 flex items-center justify-center text-xl transition-colors">
-                                <i class="ri-fire-line"></i>
+                            <div class="icon-box w-10 sm:w-14 h-10 sm:h-14 rounded-full bg-gray-100 group-hover:bg-red-50 flex items-center justify-center text-xl transition-colors">
+                                <img src="assets/images/category-icons/ceiling-fan.png" alt="Ceiling Fan" class="w-6 h-6 sm:w-8 sm:h-8 object-cover normal-icon block">
+                                <img src="assets/images/category-icons/ceiling-fan-white.png" alt="Ceiling Fan" class="w-6 h-6 sm:w-8 sm:h-8 object-cover white-icon hidden">
                             </div>
                             <div class="text-center lg:text-left">
-                                <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Room Heaters</h4>
-                                <p class="text-[10px] sm:text-xs opacity-80 font-light">Cozy Warmth</p>
+                                <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Ceiling Fans</h4>
+                                <p class="text-[10px] sm:text-xs opacity-80 font-light">Silent & Powerful</p>
                             </div>
                         </div>
                         <i class="arrow-icon ri-arrow-right-s-line hidden lg:block text-xl opacity-0 group-hover:opacity-100 text-brand-red transition-all"></i>
                     </button>
 
-                    <!-- Tab 4 -->
-                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-white text-gray-600 hover:bg-white hover:shadow-md border border-gray-100 h-fit" data-target="kitchen">
+                    <!-- Tab 3: Pedestal Fan -->
+                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-white text-gray-600 hover:bg-white hover:shadow-md border border-gray-100 h-fit" data-target="pedestal">
                         <div class="flex items-center flex-col lg:flex-row justify-center gap-2 sm:gap-4">
-                            <div class="icon-box w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-gray-100 group-hover:bg-red-50 flex items-center justify-center text-xl transition-colors">
-                                <i class="ri-restaurant-line"></i>
+                            <div class="icon-box w-10 sm:w-14 h-10 sm:h-14 rounded-full bg-gray-100 group-hover:bg-red-50 flex items-center justify-center text-xl transition-colors">
+                                <img src="assets/images/category-icons/pedestal-fans.png" alt="Pedestal Fan" class="w-6 h-6 sm:w-8 sm:h-8 object-cover normal-icon block">
+                                <img src="assets/images/category-icons/pedestal-fans-white.png" alt="Pedestal Fan" class="w-6 h-6 sm:w-8 sm:h-8 object-cover white-icon hidden">
                             </div>
                             <div class="text-center lg:text-left">
-                                <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Kitchen <span class="hidden sm:inline-block">Appliances</span></h4>
-                                <p class="text-[10px] sm:text-xs opacity-80 font-light">Chef's Choice</p>
+                                <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Pedestal Fans</h4>
+                                <p class="text-[10px] sm:text-xs opacity-80 font-light">Portable Breeze</p>
+                            </div>
+                        </div>
+                        <i class="arrow-icon ri-arrow-right-s-line hidden lg:block text-xl opacity-0 group-hover:opacity-100 text-brand-red transition-all"></i>
+                    </button>
+
+                    <!-- Tab 4: Motors -->
+                    <button class="discovery-tab cursor-pointer w-full text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 flex items-center justify-center lg:justify-between group bg-white text-gray-600 hover:bg-white hover:shadow-md border border-gray-100 h-fit" data-target="motor">
+                        <div class="flex items-center flex-col lg:flex-row justify-center gap-2 sm:gap-4">
+                            <div class="icon-box w-10 sm:w-14 h-10 sm:h-14 rounded-full bg-gray-100 group-hover:bg-red-50 flex items-center justify-center text-xl transition-colors">
+                                <img src="assets/images/category-icons/motors.png" alt="Motors" class="w-6 h-6 sm:w-8 sm:h-8 object-cover normal-icon block">
+                                <img src="assets/images/category-icons/motors-white.png" alt="Motors" class="w-6 h-6 sm:w-8 sm:h-8 object-cover white-icon hidden">
+                            </div>
+                            <div class="text-center lg:text-left">
+                                <h4 class="font-bold text-sm sm:text-lg lg:text-base xl:text-lg">Motors</h4>
+                                <p class="text-[10px] sm:text-xs opacity-80 font-light">Heavy Duty</p>
                             </div>
                         </div>
                         <i class="arrow-icon ri-arrow-right-s-line hidden lg:block text-xl opacity-0 group-hover:opacity-100 text-brand-red transition-all"></i>
@@ -527,39 +482,8 @@
 
                 <!-- Content Area (Right Side) -->
                 <div class="w-full lg:col-span-7 xl:col-span-8 relative min-h-[850px] sm:min-h-[1000px] md:min-h-[1100px] lg:min-h-[600px] xl:min-h-auto lg:max-h-[1550px]">
-                    <!-- Fan Content -->
-                    <div id="discovery-fan" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-100 z-20 scale-100">
-                        <div class="w-full lg:w-1/2 space-y-3 order-2 lg:order-1">
-                            <h3 class="text-xl sm:text-3xl font-semibold text-brand-dark">Silent Breeze Technology</h3>
-                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Experience whisper-quiet operation with our aerodynamically designed blades. Perfect for modern living rooms where silence meets style.</p>
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center gap-3 text-gray-700">
-                                    <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">High Air Delivery</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-gray-700">
-                                    <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Dust Resistant Coating</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-gray-700">
-                                    <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">5-Star Energy Rating</span>
-                                </div>
-                            </div>
-                            <a href="#products" class="inline-block px-8 py-3 bg-brand-dark text-white rounded-xl font-medium hover:bg-brand-red transition-colors mt-4 text-sm">
-                                View Collection
-                            </a>
-                        </div>
-                        <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
-                            <div class="relative w-full aspect-square flex items-center justify-center">
-                                <div class="absolute inset-0 bg-red-50 rounded-full blur-3xl opacity-60"></div>
-                                <img src="assets/images/category-img/img-1.png" alt="Ceiling Fan" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Cooler Content -->
-                    <div id="discovery-cooler" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-0 z-10 scale-95 pointer-events-none">
+                    <div id="discovery-cooler" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-100 z-20 scale-100">
                         <div class="w-full lg:w-1/2 space-y-3 order-2 lg:order-1">
                             <h3 class="text-lg sm:text-3xl font-semibold text-brand-dark">Instant Cooling Performance</h3>
                             <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Beat the heat with our powerful air coolers. Designed with honeycomb pads for superior cooling and long-lasting freshness.</p>
@@ -584,69 +508,100 @@
                         <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
                             <div class="relative w-full aspect-square flex items-center justify-center">
                                 <div class="absolute inset-0 bg-blue-50 rounded-full blur-3xl opacity-60"></div>
-                                <img src="assets/images/category-img/img-2.png" alt="Air Cooler" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="assets/images/products-img/cooler/12-in-diamond.png" alt="Air Cooler" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Heater Content -->
-                    <div id="discovery-heater" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-0 z-10 scale-95 pointer-events-none">
+                    <!-- Fan Content -->
+                    <div id="discovery-fan" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-0 z-10 scale-95 pointer-events-none">
                         <div class="w-full lg:w-1/2 space-y-3 order-2 lg:order-1">
-                            <h3 class="text-lg sm:text-3xl font-semibold text-brand-dark">Cozy Warmth Instantly</h3>
-                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Stay warm and comfortable with our advanced room heaters. Safe, efficient, and designed to blend with your interiors.</p>
+                            <h3 class="text-xl sm:text-3xl font-semibold text-brand-dark">Silent Breeze Technology</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Experience whisper-quiet operation with our aerodynamically designed blades. Perfect for modern living rooms where silence meets style.</p>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-center gap-3 text-gray-700">
                                     <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Overheat Protection</span>
+                                    <span class="text-sm sm:text-base">High Air Delivery</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-700">
                                     <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Instant Heating</span>
+                                    <span class="text-sm sm:text-base">Dust Resistant Coating</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-700">
                                     <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Tip-over Switch</span>
+                                    <span class="text-sm sm:text-base">5-Star Energy Rating</span>
                                 </div>
                             </div>
                             <a href="#products" class="inline-block px-8 py-3 bg-brand-dark text-white rounded-xl font-medium hover:bg-brand-red transition-colors mt-4 text-sm">
-                                Explore Heaters
+                                View Collection
+                            </a>
+                        </div>
+                        <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+                            <div class="relative w-full aspect-square flex items-center justify-center">
+                                <div class="absolute inset-0 bg-red-50 rounded-full blur-3xl opacity-60"></div>
+                                <img src="assets/images/products-img/ceiling-fans/kia-plus.png" alt="Ceiling Fan" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pedestal Fan Content -->
+                    <div id="discovery-pedestal" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-0 z-10 scale-95 pointer-events-none">
+                        <div class="w-full lg:w-1/2 space-y-3 order-2 lg:order-1">
+                            <h3 class="text-lg sm:text-3xl font-semibold text-brand-dark">Portable Cooling Anywhere</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Enjoy flexible cooling with our high-speed pedestal fans. Adjustable height and oscillation for wide coverage.</p>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center gap-3 text-gray-700">
+                                    <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
+                                    <span class="text-sm sm:text-base">High Speed Motor</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-700">
+                                    <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
+                                    <span class="text-sm sm:text-base">Silent Operation</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-gray-700">
+                                    <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
+                                    <span class="text-sm sm:text-base">Adjustable Height</span>
+                                </div>
+                            </div>
+                            <a href="#products" class="inline-block px-8 py-3 bg-brand-dark text-white rounded-xl font-medium hover:bg-brand-red transition-colors mt-4 text-sm">
+                                Explore Fans
                             </a>
                         </div>
                         <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
                             <div class="relative w-full aspect-square flex items-center justify-center">
                                 <div class="absolute inset-0 bg-orange-50 rounded-full blur-3xl opacity-60"></div>
-                                <img src="assets/images/category-img/img-3.png" alt="Room Heater" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="assets/images/products-img/pedestal-fans/goltu.png" alt="Pedestal Fan" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 p-8">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Kitchen Content -->
-                    <div id="discovery-kitchen" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-0 z-10 scale-95 pointer-events-none">
+                    <!-- Motor Content -->
+                    <div id="discovery-motor" class="discovery-content absolute inset-0 w-full h-full bg-white rounded-3xl p-8 xl:p-12 flex flex-col lg:flex-row items-center gap-8 shadow-md transition-all duration-500 ease-in-out opacity-0 z-10 scale-95 pointer-events-none">
                         <div class="w-full lg:w-1/2 space-y-3 order-2 lg:order-1">
-                            <h3 class="text-lg sm:text-3xl font-semibold text-brand-dark">Master Your Culinary Skills</h3>
-                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Powerful mixer grinders and kitchen appliances that make cooking a breeze. Durable motors for tough grinding.</p>
+                            <h3 class="text-lg sm:text-3xl font-semibold text-brand-dark">Heavy Duty Performance</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Reliable and durable motors for various industrial and domestic applications. Built to last with copper winding.</p>
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-center gap-3 text-gray-700">
                                     <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Powerful Motor</span>
+                                    <span class="text-sm sm:text-base">100% Copper Winding</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-700">
                                     <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Stainless Steel Jars</span>
+                                    <span class="text-sm sm:text-base">High Efficiency</span>
                                 </div>
                                 <div class="flex items-center gap-3 text-gray-700">
                                     <i class="ri-checkbox-circle-fill text-brand-red text-base lg:text-xl"></i>
-                                    <span class="text-sm sm:text-base">Overload Protector</span>
+                                    <span class="text-sm sm:text-base">Low Noise</span>
                                 </div>
                             </div>
                             <a href="#products" class="inline-block px-8 py-3 bg-brand-dark text-white rounded-xl font-medium hover:bg-brand-red transition-colors mt-4 text-sm">
-                                View Appliances
+                                View Motors
                             </a>
                         </div>
                         <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
                             <div class="relative w-full aspect-square flex items-center justify-center">
                                 <div class="absolute inset-0 bg-green-50 rounded-full blur-3xl opacity-60"></div>
-                                <img src="assets/images/category-img/img-1.png" alt="Kitchen Appliances" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain transform hover:scale-105 transition-transform duration-500">
+                                <img src="assets/images/products-img/motors/mahabali.png" alt="Motors" class="relative w-full h-full lg:h-full 2xl:h-[80%] object-contain transform hover:scale-105 transition-transform duration-500 p-8">
                             </div>
                         </div>
                     </div>
@@ -661,9 +616,9 @@
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-2xl sm:text-4xl font-semibold text-brand-dark mb-6">About <span class="brand-red">NERCO</span></h2>
                 <p class="text-gray-600 xm:text-lg leading-relaxed mb-12 text-justify sm:text-center">
-                    Nerco Home Appliances is a trusted name in the electrical manufacturing industry. 
-                    We are dedicated to delivering high-performance, durable, and stylish appliances that enhance your everyday life. 
-                    From cooling solutions to kitchen essentials, our products are built with precision and care.
+                    Established in the year <span class="font-bold text-brand-dark">1953</span>, we <span class="font-bold brand-red">Nerco Home Appliances</span> are an <span class="font-bold text-brand-dark">ISI Certified Company</span>, specializing in the manufacturing of Wall Fans, Table Fans, Ceiling Fans, Exhaust Fans, Coolers, Cooler Motors, Pedestal Fans, Room Heaters, Immersion Rods, and household appliances.
+                    Manufactured using supreme-in-class material and progressive tools & technology, our products conform to market guidelines and undergo rigorous testing prior to final delivery.
+                    As an ISO 9001-2015 certified company, we direct all our activities to cater to customer expectations by providing excellent quality products. We follow moral business policies and maintain crystal-pure transparency in all our transactions to keep healthy relations with our customers. For our accomplishment story, we are grateful to Owner <span class="font-bold brand-red">Mr. Varun Shighal</span>, whose continual backing and direction have been instrumental in attaining exponential development in the current market.
                 </p>
                 <div class="flex justify-center gap-y-10 gap-x-16 md:gap-x-28 flex-wrap text-brand-dark">
                     <div class="flex flex-col items-center">
@@ -706,13 +661,13 @@
                     <!-- Thumbnails -->
                     <div class="flex gap-4 sm:gap-6">
                         <div class="seller-thumb cursor-pointer border-2 border-brand-red rounded-2xl p-3 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center bg-gray-50 transition-all duration-300 hover:shadow-md">
-                            <img src="assets/images/category-img/img-1.png" class="w-full h-full object-contain" alt="Thumbnail 1">
+                            <img src="assets/images/products-img/cooler/boxer-12-in-tower.png" class="w-full h-full object-contain" alt="Boxer Cooler">
                         </div>
                         <div class="seller-thumb cursor-pointer border-2 border-gray-200 rounded-2xl p-3 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center bg-gray-50 transition-all duration-300 hover:border-brand-red hover:shadow-md">
-                            <img src="assets/images/category-img/img-2.png" class="w-full h-full object-contain" alt="Thumbnail 2">
+                            <img src="assets/images/products-img/cooler/12-in-diamond.png" class="w-full h-full object-contain" alt="Diamond Cooler">
                         </div>
                         <div class="seller-thumb cursor-pointer border-2 border-gray-200 rounded-2xl p-3 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center bg-gray-50 transition-all duration-300 hover:border-brand-red hover:shadow-md">
-                            <img src="assets/images/category-img/img-3.png" class="w-full h-full object-contain" alt="Thumbnail 3">
+                            <img src="assets/images/products-img/cooler/16-in-silk.png" class="w-full h-full object-contain" alt="Silk Cooler">
                         </div>
                     </div>
 
@@ -733,15 +688,15 @@
                         <div id="seller-slider" class="absolute inset-0 flex transition-transform duration-700 ease-out h-full">
                             <!-- Image 1 -->
                             <div class="w-full h-full flex-shrink-0 flex items-center justify-center p-12">
-                                <img src="assets/images/category-img/img-1.png" alt="Best Seller 1" class="w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="assets/images/products-img/cooler/boxer-12-in-tower.png" alt="Boxer Cooler" class="w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
                             </div>
                             <!-- Image 2 -->
                             <div class="w-full h-full flex-shrink-0 flex items-center justify-center p-12">
-                                <img src="assets/images/category-img/img-2.png" alt="Best Seller 2" class="w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="assets/images/products-img/cooler/12-in-diamond.png" alt="Diamond Cooler" class="w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
                             </div>
                             <!-- Image 3 -->
                             <div class="w-full h-full flex-shrink-0 flex items-center justify-center p-12">
-                                <img src="assets/images/category-img/img-3.png" alt="Best Seller 3" class="w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="assets/images/products-img/cooler/16-in-silk.png" alt="Silk Cooler" class="w-full h-full object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                     </div>
@@ -751,7 +706,7 @@
     </section>
 
     <!-- Product Highlight CTA -->
-    <section class="py-12 bg-brand-dark text-white overflow-hidden relative">
+    <section class="py-12 lg:py-0 bg-brand-dark text-white overflow-hidden relative">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div class="lg:w-3/5 text-center md:text-left">
@@ -766,7 +721,7 @@
                 </div>
                 <div class="lg:w-2/5 flex justify-center md:justify-end relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full blur-2xl opacity-40 transform scale-75"></div>
-                    <img src="assets/images/category-img/img-1.png" alt="Premium Air Cooler" class="relative h-48 sm:h-64 object-contain drop-shadow-2xl transform transition-transform duration-500">
+                    <img src="assets/images/products-img/cooler/dhamal.png" alt="Premium Air Cooler" class="relative h-72 sm:h-96 object-cover drop-shadow-2xl transform transition-transform duration-500">
                 </div>
             </div>
         </div>
@@ -841,36 +796,41 @@
                 <div class="space-y-8 lg:col-span-6">
                     <!-- Map -->
                     <div class="rounded-3xl overflow-hidden h-[300px] sm:h-[400px] border border-gray-200 relative">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192776!2d77.06889754725782!3d28.52758200617607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1709665432100!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.8069144840124!2d77.44379575766577!3d28.695421967813203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf10b6bc679af%3A0xd3826e3845054301!2sc%2C%2039%2C%20Meerut%20Road%20Industrial%20Area%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201017!5e0!3m2!1sen!2sin!4v1768984111438!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
                     <!-- Contact Info Cards -->
                     <div class="grid grid-cols-1 sm:grid-cols-6 gap-4">
                         <!-- Email Card -->
-                        <div class="sm:col-span-3 2xl:col-span-2 py-6 px-4 rounded-2xl border border-gray-200 text-center">
+                        <div class="sm:col-span-3 2xl:col-span-3 py-6 px-4 rounded-2xl border border-gray-200 text-center">
                             <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center text-white border border-brand-red mx-auto mb-4">
                                 <i class="ri-mail-fill text-xl"></i>
                             </div>
                             <h3 class="text-lg font-bold text-brand-dark mb-2">Email Us</h3>
-                            <p class="text-gray-600 font-medium text-sm break-all">info@nercoappliances.com</p>
+                            <p class="text-gray-600 text-sm xl:text-base break-all">
+                                <a href="mailto:nercohomeappliances@gmail.com" class="hover:text-brand-red transition-colors">nercohomeappliances@gmail.com</a>
+                            </p>
                         </div>
                         
                         <!-- Phone Card -->
-                        <div class="sm:col-span-3 2xl:col-span-2 py-6 px-4 rounded-2xl border border-gray-200 text-center">
+                        <div class="sm:col-span-3 2xl:col-span-3 py-6 px-4 rounded-2xl border border-gray-200 text-center">
                             <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center text-white border border-brand-red mx-auto mb-4">
                                 <i class="ri-phone-fill text-xl"></i>
                             </div>
                             <h3 class="text-lg font-bold text-brand-dark mb-2">Call Us</h3>
-                            <p class="text-gray-600 font-medium text-sm">+91 98765 43210</p>
+                            <p class="text-gray-600 text-sm xl:text-base">
+                                <a href="tel:+919457694616" class="hover:text-brand-red transition-colors mr-2">+91-94576 94616,</a>
+                                <a href="tel:+919599939264" class="hover:text-brand-red transition-colors">+91-95999 39264</a>
+                            </p>
                         </div>
 
                         <!-- Address Card -->
-                        <div class="sm:col-span-6 2xl:col-span-2 py-6 px-4 rounded-2xl border border-gray-200 text-center">
+                        <div class="sm:col-span-6 2xl:col-span-6 py-6 px-4 rounded-2xl border border-gray-200 text-center">
                             <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center text-white border border-brand-red mx-auto mb-4">
                                 <i class="ri-map-pin-fill text-xl"></i>
                             </div>
                             <h3 class="text-lg font-bold text-brand-dark mb-2">Visit Us</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">123 Industrial Area, Phase 2,<br>New Delhi, India</p>
+                            <p class="text-gray-600 text-sm xl:text-base leading-relaxed">C 39/1A, Meerut Road Industrial Area,<br>Ghaziabad, Uttar Pradesh</p>
                         </div>
                     </div>
                 </div>
@@ -914,9 +874,9 @@
     <!-- Footer -->
     <footer class="bg-brand-dark text-white pt-16 pb-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Info -->
-                <div>
+                <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-1">
                     <a href="#" class="flex items-center justify-center gap-2 mb-6">
                         <div class="hidden flex items-center gap-2">
                             <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center text-white font-bold text-xl">N</div>
@@ -924,7 +884,7 @@
                         </div>
                         <img src="assets/images/logo/nerco-logo.png" alt="Nerco Logo" class="w-28 sm:w-32 object-cover">
                     </a>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 text-center sm:text-left">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 text-center 2xl:text-left">
                         Innovating home comfort with premium quality appliances. We bring efficiency and style to your living spaces.
                     </p>
                 </div>
@@ -951,11 +911,10 @@
                         <span class="absolute -bottom-2 left-0 w-12 h-1 bg-brand-red rounded-full"></span>
                     </h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Coolers</a></li>
                         <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Ceiling Fans</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Air Coolers</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Room Heaters</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Kitchen Appliances</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Water Heaters</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Pedestal Fans</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition-colors flex items-center gap-2"><i class="ri-arrow-right-s-line"></i> Motors</a></li>
                     </ul>
                 </div>
 
@@ -968,15 +927,20 @@
                     <ul class="space-y-3 text-gray-400 text-sm mb-5">
                         <li class="flex items-start gap-3">
                             <i class="ri-map-pin-line text-brand-red text-lg mt-0.5"></i>
-                            <span>123 Industrial Area, Phase 2,<br>New Delhi, India</span>
+                            <span>C 39/1A, Meerut Road Industrial Area,<br>Ghaziabad, Uttar Pradesh</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="ri-phone-line text-brand-red text-lg"></i>
-                            <span>+91 98765 43210</span>
+                            <span>
+                                <a href="tel:+919457694616" class="hover:text-white transition-colors">+91-94576 94616</a>, 
+                                <a href="tel:+919599939264" class="hover:text-white transition-colors">+91-95999 39264</a>
+                            </span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="ri-mail-line text-brand-red text-lg"></i>
-                            <span>info@nercoappliances.com</span>
+                            <span>
+                                <a href="mailto:nercohomeappliances@gmail.com" class="hover:text-white transition-colors">nercohomeappliances@gmail.com</a>
+                            </span>
                         </li>
                     </ul>
                     <div class="flex space-x-4">
@@ -998,7 +962,7 @@
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-400 text-sm text-center md:text-left">
-                    &copy; 2023 All rights reserved.
+                    &copy; 2025 All rights reserved.
                 </p>
                 <div class="flex space-x-6 text-sm text-gray-400">
                     <a href="#" class="hover:text-brand-red transition-colors">Privacy Policy</a>
@@ -1023,10 +987,10 @@
             <div id="search-suggestions" class="mt-8 opacity-0 translate-y-4 transition-all duration-500 delay-100">
                 <p class="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4">Popular Searches</p>
                 <div class="flex flex-wrap gap-3">
+                    <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Coolers</button>
                     <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Ceiling Fans</button>
-                    <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Air Coolers</button>
-                    <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Room Heaters</button>
-                    <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Mixer Grinders</button>
+                    <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Pedestal Fans</button>
+                    <button class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-[10px] sm:text-sm hover:bg-brand-red hover:text-white transition-colors cursor-pointer">Motors</button>
                 </div>
             </div>
         </div>

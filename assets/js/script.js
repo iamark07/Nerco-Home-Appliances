@@ -5,6 +5,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightBtn = document.getElementById('category-scroll-right');
 
     if (container && leftBtn && rightBtn) {
+        const updateScrollState = () => {
+            const isOverflowing = container.scrollWidth > container.clientWidth;
+            
+            if (isOverflowing) {
+                container.classList.remove('justify-center');
+                container.classList.add('justify-start');
+                
+                // Handle arrows visibility based on scroll position
+                const scrollLeft = container.scrollLeft;
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                
+                // Left arrow
+                if (scrollLeft > 10) {
+                    leftBtn.classList.remove('hidden');
+                    leftBtn.classList.add('flex');
+                } else {
+                    leftBtn.classList.add('hidden');
+                    leftBtn.classList.remove('flex');
+                }
+
+                // Right arrow
+                if (scrollLeft < maxScroll - 10) {
+                    rightBtn.classList.remove('hidden');
+                    rightBtn.classList.add('flex');
+                } else {
+                    rightBtn.classList.add('hidden');
+                    rightBtn.classList.remove('flex');
+                }
+            } else {
+                // Center content if no overflow
+                container.classList.add('justify-center');
+                container.classList.remove('justify-start');
+                
+                // Hide arrows
+                leftBtn.classList.add('hidden');
+                leftBtn.classList.remove('flex');
+                rightBtn.classList.add('hidden');
+                rightBtn.classList.remove('flex');
+            }
+        };
+
+        // Initial check and listeners
+        updateScrollState();
+        window.addEventListener('resize', updateScrollState);
+        container.addEventListener('scroll', updateScrollState);
+
         const getScrollAmount = () => {
             // Scroll by 3/4 of the container's visible width for a smoother experience
             return container.clientWidth * 0.75;
@@ -39,6 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     iconBox.classList.remove('bg-white/20');
                     iconBox.classList.add('bg-gray-100', 'group-hover:bg-red-50');
 
+                    // Reset Icon Image
+                    const normalIcon = t.querySelector('.normal-icon');
+                    const whiteIcon = t.querySelector('.white-icon');
+                    if (normalIcon) {
+                        normalIcon.classList.remove('hidden');
+                        normalIcon.classList.add('block');
+                    }
+                    if (whiteIcon) {
+                        whiteIcon.classList.remove('block');
+                        whiteIcon.classList.add('hidden');
+                    }
+
                     // Reset Arrow
                     const arrow = t.querySelector('.arrow-icon');
                     arrow.classList.remove('opacity-100', 'text-white');
@@ -52,6 +110,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeIconBox = tab.querySelector('.icon-box');
                 activeIconBox.classList.remove('bg-gray-100', 'group-hover:bg-red-50');
                 activeIconBox.classList.add('bg-white/20');
+
+                // Set Active Icon Image
+                const activeNormalIcon = tab.querySelector('.normal-icon');
+                const activeWhiteIcon = tab.querySelector('.white-icon');
+                if (activeNormalIcon) {
+                    activeNormalIcon.classList.remove('block');
+                    activeNormalIcon.classList.add('hidden');
+                }
+                if (activeWhiteIcon) {
+                    activeWhiteIcon.classList.remove('hidden');
+                    activeWhiteIcon.classList.add('block');
+                }
 
                 const activeArrow = tab.querySelector('.arrow-icon');
                 activeArrow.classList.remove('opacity-0', 'group-hover:opacity-100', 'text-brand-red');
